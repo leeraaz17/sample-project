@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sample Project</title>
+    
+  </head>
+  <body>
+    <div id="dec">
+		<contact-us></contact-us>
+	</div>
+    <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+  </body>
+</html>
+<script>
+	/*
+	Vue.component('counter', {
+		data: function(){
+			return{
+ 				counter: 0	
+			}
+		},
+		template: `
+			<div>
+				<button @click="counter++">Counter: {{ counter }} </button>
+			</div>
+		`
+	});
+
+	new Vue({
+		el:'#dec'
+	})
+	*/
+	var contactUS = {
+		data: function () {
+			return {
+				email: 'info@company.com'
+			}
+		},
+		template: `<div>
+					<h1>Contact Us</h1>
+					<p> Please send an e-mail to: {{ email }} </p>
+					</div>
+		`
+	};
+
+
+	new Vue({
+		el: '#dec',
+		components: {
+			contactUs: contactUS
+		}
+	});
+	
+	new Vue({
+		el:'apps'
+	});
+</script>
